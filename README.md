@@ -18,7 +18,7 @@ Serializing/Deserializing fields and properties should have `KeyAttribute`.
 Serialization/deserialization processes may be managed with the methods that may be implemented by using `IFormatter` interface.
 4. Multidimensional dimensional arrays of (1-6) types (rank of array may be from 1 to 32).
 5. Collections of (1-6) types (`List<>`, `LinkedList<>`, `HashSet<>`, `SortedSet<>`, `Queue<>`, `Stack<>`, `ConcurrentQueue<>`, `ConcurrentStack<>` and `ConcurrentBag{T}`).
-6. Dictionaries of (1-6) types (`Dictionary<,>`, `SortedDictionary<,>`, `SortedList<,>` and `ConcurrentDictionary<,>`.
+6. Dictionaries of (1-6) types (`Dictionary<,>`, `SortedDictionary<,>`, `SortedList<,>` and `ConcurrentDictionary<,>`).
 
 # Supported functionality
 1. Formatter supports conversion between primitive types (each other), collection / dictionary types (each other) if the conversion is allowable.
