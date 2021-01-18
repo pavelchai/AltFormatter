@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F97BC114-C8EF-4F01-AE21-C1E779315C5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AltFormatter</RootNamespace>
+    <AssemblyName>AltFormatter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\LocalizedException.cs" />
+    <Compile Include="Exceptions\LocalizedExceptions.cs" />
+    <Compile Include="Formatter\AltFormatterBinaryText.cs" />
+    <Compile Include="Formatter\DataStorer\Entries\AbstractDataStoreEntry.cs" />
+    <Compile Include="Formatter\DataStorer\Entries\IDataStorerEntry.cs" />
+    <Compile Include="Formatter\DataStorer\IReadOnlyDataStorer.cs" />
+    <Compile Include="Formatter\DataStorer\IWriteOnlyDataStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\BinaryStorer\ReadOnly\BinaryReadOnlyStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\BinaryStorer\ReadOnly\BinaryReadOnlyStorerEntry.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\BinaryStorer\WriteOnly\BinaryWriteOnlyStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\BinaryStorer\WriteOnly\BinaryWriteOnlyStorerEntry.cs" />
+    <Compile Include="Formatter\DataStorer\DataStorerExceptions.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\AbstractZipStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\Other\AbstractZipDataEntry.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\ReadOnly\ZipReadOnlyStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\ReadOnly\ZipReadOnlyStorerEntry.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\WriteOnly\ZipWriteOnlyStorer.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\WriteOnly\ZipWriteOnlyStorerEntry.cs" />
+    <Compile Include="Formatter\DataStorer\Storers\Zip64Storer\ZipStorerUtils.cs" />
+    <Compile Include="Formatter\Partial\Deserialization\AbstractFormatter.Deserialization.Virtual.cs" />
+    <Compile Include="Formatter\Partial\Serialization\AbstractFormatter.Serialization.Virtual.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Formatter\AltFormatterZipXmlText.cs" />
+    <Compile Include="Formatter\AltXml\AbstractAltXmlBase.cs" />
+    <Compile Include="Formatter\AltXml\AltXmlAttribute.cs" />
+    <Compile Include="Formatter\AltXml\AltXmlDocument.cs" />
+    <Compile Include="Formatter\AltXml\AltXmlExceptions.cs" />
+    <Compile Include="Formatter\AltXml\AltXmlNode.cs" />
+    <Compile Include="Formatter\FormatterAttributes.cs" />
+    <Compile Include="Formatter\IFormattable.cs" />
+    <Compile Include="Formatter\IFormatter.cs" />
+    <Compile Include="Formatter\Partial\AbstractFormatter.Reflection.cs" />
+    <Compile Include="Formatter\Partial\AbstractFormatter.cs" />
+    <Compile Include="Formatter\Partial\AbstractFormatter.Definitions.cs" />
+    <Compile Include="Formatter\Partial\AbstractFormatter.Exceptions.cs" />
+    <Compile Include="Formatter\Partial\AbstractFormatter.TypeResolvers.cs" />
+    <Compile Include="Formatter\Partial\Deserialization\AbstractFormatter.Deserialization.cs" />
+    <Compile Include="Formatter\Partial\Serialization\AbstractFormatter.Serialization.cs" />
+    <Compile Include="Formatter\Types\FormattableType.cs" />
+    <Compile Include="Formatter\Types\FormattableValue.cs" />
+    <Compile Include="Utils\ArrayUtils.cs" />
+    <Compile Include="Utils\CombinationUtils.cs" />
+    <Compile Include="Utils\ExceptionUtils.cs" />
+    <Compile Include="Utils\LinkedListUtils.cs" />
+    <Compile Include="Utils\Other\Bytes\BytesConverter.cs" />
+    <Compile Include="Utils\Other\Bytes\Writer\ByteArrayWriter.cs" />
+    <Compile Include="Utils\Other\Bytes\Writer\IByteArrayWriter.cs" />
+    <Compile Include="Utils\Other\Bytes\Writer\IByteArrayWriterExtensions.cs" />
+    <Compile Include="Utils\ReadOnlyList\MinMax{T}.cs" />
+    <Compile Include="Utils\ReadOnlyList\ReadOnlyListUtils.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\AbstractReflectionCallback.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\ActionCallback{TIn1,TIn2}\ActionCallback{TIn1,TIn2}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\ActionCallback{TIn1,TIn2}\IActionCallback{TIn1,TIn2}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\ActionCallback{TIn}\ActionCallback{TIn}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\ActionCallback{TIn}\IActionCallback{TIn}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TIn,TOut}\FunctionCallback{TIn,TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TIn,TOut}\IFunctionCallback{TIn,TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TIn1,TIn2,TOut}\FunctionCallback{TIn1,TIn2,TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TIn1,TIn2,TOut}\IFunctionCallback{TIn1,TIn2,TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TOut}\FunctionCallback{TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\FunctionCallback{TOut}\IFunctionCallback{TOut}.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionCallbacks\ReflectionCallbackExceptions.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionUtils.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionUtilsAttributes.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionUtilsExceptions.cs" />
+    <Compile Include="Utils\ReflectionUtils\ReflectionUtilsStrategy.cs" />
+    <Compile Include="Utils\SortUtils\SortUtils.IComparable{T}.cs" />
+    <Compile Include="Utils\SortUtils\SortUtils.IComparer{T}.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Utils\TypeUtils\TypeUtils.cs" />
+    <Compile Include="Utils\TypeUtils\TypeUtilsExceptions.cs" />
+    <Compile Include="Utils\Validation.cs" />
+    <Compile Include="Utils\ZLib\Checksums\CRC32.cs" />
+    <Compile Include="Utils\ZLib\CompressionMethod.cs" />
+    <Compile Include="Utils\ZLib\Deflater\Deflater.cs" />
+    <Compile Include="Utils\ZLib\Deflater\DeflaterConstants.cs" />
+    <Compile Include="Utils\ZLib\Deflater\DeflaterEngine.cs" />
+    <Compile Include="Utils\ZLib\Deflater\DeflaterHuffman.cs" />
+    <Compile Include="Utils\ZLib\Deflater\DeflaterPending.cs" />
+    <Compile Include="Utils\ZLib\Deflater\PendingBuffer.cs" />
+    <Compile Include="Utils\ZLib\Inflater\Inflater.cs" />
+    <Compile Include="Utils\ZLib\Inflater\InflaterDynHeader.cs" />
+    <Compile Include="Utils\ZLib\Inflater\InflaterHuffmanTree.cs" />
+    <Compile Include="Utils\ZLib\Inflater\OutputWindow.cs" />
+    <Compile Include="Utils\ZLib\Inflater\StreamManipulator.cs" />
+    <Compile Include="Utils\ZLib\ZLibUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
