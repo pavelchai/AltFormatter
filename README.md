@@ -36,7 +36,7 @@ Serialization/deserialization processes may be managed with the methods that may
 
 # Disadvantages
 
-1. Performance of the solution is near of the XMLSerializer, SOAP Serializer (see in examples). If you want more performance, you should select another serializer.
+1. Performance of the solution is near of the XMLSerializer, SOAPFormatter (see in examples). If you want more performance, you should select another serializer.
 
 # How to use
 
