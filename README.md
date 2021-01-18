@@ -89,7 +89,7 @@ byte[] data = formatter.Serialize<Version1>(version1);
 Version1 deserialized = formatter.Deserialize<Version1>(data);
 ```
 
-## Output (version1.zip)
+## Output example (version1.zip)
 
 File stucture:
 
