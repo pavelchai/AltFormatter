@@ -20,7 +20,7 @@ Serialization/deserialization processes may be managed with the methods that may
 5. Collections of (1-6) types (`List<>`, `LinkedList<>`, `HashSet<>`, `SortedSet<>`, `Queue<>`, `Stack<>`, `ConcurrentQueue<>`, `ConcurrentStack<>` and `ConcurrentBag{T}`).
 6. Dictionaries of (1-6) types (`Dictionary<,>`, `SortedDictionary<,>`, `SortedList<,>` and `ConcurrentDictionary<,>`.
 
-# Supported functionality:
+# Supported functionality
 1. Formatter supports conversion between primitive types (each other), collection / dictionary types (each other) if the conversion is allowable.
 2. Formatter supports conversion between types (3). The combination of the keys of the types should be equals, but names of these types may be different.
 3. Formatter supports curcular references.
@@ -38,7 +38,7 @@ Serialization/deserialization processes may be managed with the methods that may
 
 1. Performance of the solution is near of the XMLSerializer, SOAP Serializer (see in examples). If you want more performance, you should select another serializer.
 
-# How to use:
+# How to use
 
 1. Add `FormattableAttribute` to the assembly with types
 
