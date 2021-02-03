@@ -2,7 +2,7 @@
 
 Objects serialization library into ZIP64 file (with XML + plain text).
 
-Target: NET Framework 4.5+ / Core 1.0+.
+Target: NET Framework 4.5+
 
 1. Storer: ZIP64.
 2. Information: XML files.
