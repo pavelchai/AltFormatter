@@ -49,20 +49,20 @@ Serialization/deserialization processes may be managed with the methods that may
 public class Version1
 {
     [Key("Property 1")]
-    public virtual int Property1 { get; set; }
+    public int Property1 { get; set; }
     
     [Key("Property 2")]
-    public virtual int[] Property2 { get; set; }
+    public int[] Property2 { get; set; }
 }
 
 [Formattable("Version 2")]
 public class Version2
 {
     [Key("Property 1")]
-    public virtual int Property1 { get; set; }
+    public int Property1 { get; set; }
     
     [Key("Property 2")]
-    public virtual int[] Property2 { get; set; }
+    public int[] Property2 { get; set; }
     
     private Version2()
     {
